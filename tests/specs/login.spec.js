@@ -5,7 +5,7 @@ import { LOGIN_USERS } from '../config/e2eConstants';
 import LoginPage from '../pages/LoginPage';
 import SwagOverviewPage from '../pages/SwagOverviewPage';
 
-test.describe('LoginPage ', () => {
+test.describe('LoginPage', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('http://localhost:3000/');
   });
@@ -33,8 +33,6 @@ test.describe('LoginPage ', () => {
     await loginPage.signIn(LOGIN_USERS.LOCKED);
 
     expect(await loginPage.isErrorMessageDisplayed()).toBeTruthy();
-    expect(await loginPage.getErrorMessage()).toContain(
-      'Epic sadface: Sorry, this user has been locked out.'
-    );
+    expect(await loginPage.getErrorMessage()).toContain('Epic sadface: Sorry, this user has been locked out.');
   });
 });
