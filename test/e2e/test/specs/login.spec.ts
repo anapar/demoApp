@@ -3,8 +3,9 @@ import LoginPage from '../page-objects/LoginPage';
 import SwagOverviewPage from '../page-objects/SwagOverviewPage';
 
 describe('LoginPage', () => {
-  beforeEach(async () => {
-    await browser.url('');
+  beforeEach(async ({page}) => {
+    // await browser.url('http://localhost:3000/');
+    await page.goto('http://localhost:3000/');
     await LoginPage.waitForIsShown();
   });
 
