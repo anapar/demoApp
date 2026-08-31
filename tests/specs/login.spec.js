@@ -6,7 +6,7 @@ import LoginPage from '../pages/LoginPage';
 import SwagOverviewPage from '../pages/SwagOverviewPage';
 
 test.describe('LoginPage', () => {
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({page}) => {
     await page.goto('http://localhost:3000/');
   });
 
